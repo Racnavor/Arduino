@@ -22,7 +22,6 @@ byte colPins[numCols] = {51, 52, 53}; //Colonnes 0 à 2
 
 //Initialisation d'une instance pour la classe Keypad
 Keypad myKeypad = Keypad(makeKeymap(keymap), rowPins, colPins, numRows, numCols);
-//Create the variable myKeypad and import key settings
 //Création de la variable Keypad et importation des paramètres des touches
 
 void setup()
