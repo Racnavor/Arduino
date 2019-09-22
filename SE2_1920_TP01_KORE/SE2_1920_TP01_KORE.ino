@@ -1,5 +1,6 @@
 #include<Keypad.h>
 
+//Déclaration des variables
 char code[4];
 int i = 0;
 
@@ -22,11 +23,13 @@ byte colPins[numCols] = {51, 52, 53}; //Colonnes 0 à 2
 //Initialisation d'une instance pour la classe Keypad
 Keypad myKeypad = Keypad(makeKeymap(keymap), rowPins, colPins, numRows, numCols);
 //Create the variable myKeypad and import key settings
+//Création de la variable Keypad et importation des paramètres des touches
 
 void setup()
 {
   // put your setup code here, to run once:
 
+  //Initialisation des différentes pins
   pinMode(3, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(3), raz, CHANGE);
   Serial.begin(9600);
@@ -44,17 +47,17 @@ void loop()
 {
   // put your main code here, to run repeatedly:
 
+  //Mise dans une variable de la touche pressée
   char keypressed = myKeypad.getKey();
 
-  if (keypressed != NO_KEY && i < 4) //This is where it hangs out waiting for a key press
+  if (keypressed != NO_KEY && i < 4) //Vérification si une touche est pressée
   {
-    delay(25); //25 ms key read pause
-    code[i] = keypressed;
+    code[i] = keypressed; //Mise dans un tableau de la touche pressée
     Serial.println(code[i]);
     i = i + 1;
   }
 
-
+  //Séquence d'allumage des différentes LEDs
   if (i == 4)
   {
     if (code[0] == '1' && code[1] == '2' && code[2] == '1' && code[3] == '2')
@@ -113,6 +116,7 @@ void loop()
   }
 }
 
+//Fonction raz
 void raz()
 {
   i = 0;
