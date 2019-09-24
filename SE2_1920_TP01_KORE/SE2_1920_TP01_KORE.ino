@@ -29,8 +29,8 @@ void setup()
   // put your setup code here, to run once:
 
   //Initialisation des différentes pins
-  pinMode(3, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(3), raz, CHANGE);
+  pinMode(18, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(18), raz, CHANGE);
   Serial.begin(9600);
   pinMode(22, OUTPUT);
   pinMode(23, OUTPUT);
