@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-Je m'appelle Emre et je met trop de commentaire dans mon code.
+Je m'appelle Emre et je mets trop de commentaire dans mon code.
 	
 ## Technologies
 Ce projet a été réalisé grâce au technologie
