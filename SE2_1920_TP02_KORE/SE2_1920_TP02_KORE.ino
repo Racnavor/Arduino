@@ -5,8 +5,8 @@
 
 int pot_pour;
 
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
 
   Serial.begin(9600);
   Timer1.initialize();
@@ -16,8 +16,8 @@ void setup() {
   delay(2000);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
 
   pot_pour = map(analogRead(A0), 0, 1023, 0, 100); // Redéfinition de la plage de valeur
   Serial.println(pot_pour); // Affichage de la valeur du potentiomètre en pourcent sur l'écran
