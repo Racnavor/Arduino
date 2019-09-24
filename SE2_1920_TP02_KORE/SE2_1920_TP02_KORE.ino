@@ -22,5 +22,5 @@ void loop() {
   pot_pour = map(analogRead(A0), 0, 1023, 0, 100); // Redéfinition de la plage de valeur
   Serial.println(pot_pour); // Affichage de la valeur du potentiomètre en pourcent sur l'écran
   MFS.write(pot_pour); // Affichage de la valeur du potentiomètre en pourcent sur l'afficheur 7 segments
-  delay(100);
+  delay(1000);
 }
