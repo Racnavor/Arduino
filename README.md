@@ -6,18 +6,12 @@
 * [Setup](#setup)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+Je m'appelle Emre et je met trop de commentaire dans mon code.
 	
 ## Technologies
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+Ce projet a été réalisé grâce au technologie
+* Dylan Piette
+C'est tout
 	
 ## Setup
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
+Un pc et un minimum de QI, 25 devrait suffire.
