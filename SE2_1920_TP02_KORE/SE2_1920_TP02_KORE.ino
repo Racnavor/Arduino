@@ -7,7 +7,6 @@ int pot_pour;
 
 void setup()
 {
-
   Serial.begin(9600);
   Timer1.initialize();
   MFS.initialize(&Timer1); // Initialisation de la bibliothèque multi-function shield
@@ -18,7 +17,6 @@ void setup()
 
 void loop()
 {
-
   pot_pour = map(analogRead(A0), 0, 1023, 0, 100); // Redéfinition de la plage de valeur
   Serial.println(pot_pour); // Affichage de la valeur du potentiomètre en pourcent sur l'écran
   MFS.write(pot_pour); // Affichage de la valeur du potentiomètre en pourcent sur l'afficheur 7 segments
