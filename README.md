@@ -6,12 +6,10 @@
 * [Setup](#setup)
 
 ## General info
-Je m'appelle Emre et je mets trop de commentaire dans mon code.
+Plusieurs petits projets Arduino
 	
 ## Technologies
-Ce projet a été réalisé grâce au technologie
-* Dylan Piette
-C'est tout
+Arduino
 	
 ## Setup
 Un pc et un minimum de QI, 25 devrait suffire.
