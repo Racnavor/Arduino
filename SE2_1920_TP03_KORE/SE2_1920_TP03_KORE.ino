@@ -37,12 +37,13 @@ void loop()
     tempo = millis() - temps; // Initialisation de la tempo
     temps = millis();
     affichTemps = (tempo / 1000.0);
-    MFS.write(affichTemps); // Affichage du temps de clignotement sur l'afficheur 7 segments
     do
     {
       LED_ON;
+      MFS.write(affichTemps); // Affichage du temps de clignotement sur l'afficheur 7 segments
       delay(200);
       LED_OFF;
+      MFS.write("");
       delay(200);
     }while(millis() <= temps + tempo);
     LED_OFF;
