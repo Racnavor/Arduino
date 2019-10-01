@@ -11,6 +11,12 @@ void setup()
   Timer1.initialize();
   MFS.initialize(&Timer1); // Initialisation de la bibliothèque multi-function shield
 
+  // Buzzer
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);
+  delay(50);
+  digitalWrite(3, HIGH);
+
   MFS.write("Debu"); // Affichage de "Debu" sur l'afficheur 7 segments
   delay(2000);
 }
