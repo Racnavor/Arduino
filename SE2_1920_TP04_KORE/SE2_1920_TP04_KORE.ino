@@ -42,7 +42,7 @@ void loop()
     {
       Serial.println("Trop de valeur!");
     }
-    else if (lire.length() < 5) // Si plus petit
+    else if (lire.length() < 4) // Si plus petit
     {
       Serial.println("Pas assez de valeur!");
     }
