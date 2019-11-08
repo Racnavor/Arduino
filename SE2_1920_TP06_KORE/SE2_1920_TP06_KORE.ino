@@ -15,6 +15,9 @@ boolean ledInfo = true;
 void setup()
 {
   Serial.begin(9600);
+  
+  Timer1.initialize();
+  MFS.initialize(&Timer1); // Initialisation de la bibliothèque multi-function shield
 
   //Initialisation des différentes pins
   pinMode(18, INPUT_PULLUP);
@@ -28,12 +31,6 @@ void setup()
   pinMode(LED_INFO, OUTPUT);
   ledOff();
   digitalWrite(LED_INFO, HIGH);
-
-  Timer1.initialize();
-  MFS.initialize(&Timer1); // Initialisation de la bibliothèque multi-function shield
-  MFS.write("SALU");
-  delay(1000);
-  MFS.write("");
 }
 
 void loop()
@@ -93,7 +90,6 @@ void ledOff()
 
 void au()
 {
-  ledInfo = true;
   /*MFS.write("BPAU");
     while (true)
     {
@@ -108,13 +104,6 @@ void au()
     }*/
   for (int i = 0; i < sizeof(LED); i++)
   {
-    digitalWrite(LED[i], HIGH);
+    digitalWrite(LED[i], LOW);
   }
-  
-//  digitalWrite(LED1, HIGH);
-//  digitalWrite(LED2, HIGH);
-//  digitalWrite(LED3, HIGH);
-//  digitalWrite(LED4, HIGH);
-//  digitalWrite(LED5, HIGH);
-//  digitalWrite(LED6, HIGH);
 }
